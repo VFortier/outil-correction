@@ -3,16 +3,20 @@ export default function labWord2() {
         name: "Lab Word 2",
         remarks: [
             {
-                text: "Félicitation! Peu d'élèves ont eu 100% pour ce lab",
+                text: "Félicitation! Peu d'étudiants ont eu 100% pour ce lab. ⭐⭐⭐⭐⭐\n",
                 threshold: 100,
             },
             {
-                text: "Excellent travail! ",
+                text: "Excellent travail! ⭐\n",
                 threshold: 90,
             },
             {
-                text: "très bon travail! ",
+                text: "Très bon travail!\n",
                 threshold: 80,
+            },
+            {
+                text: "Bon travail!\n",
+                threshold: 70,
             },
             {
                 text: "",

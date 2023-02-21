@@ -13,7 +13,7 @@ class Criterion extends React.Component {
                         onChange={this.props.handleChange}
                         checked={this.props.isChecked}
                     />
-                    [{this.props.points} pts] {this.props.text}
+                    {this.props.text} [{this.props.points} pts]
                 </label>
             </div>
         );
@@ -43,7 +43,7 @@ class Exercise extends React.Component {
 
         return (
             <div>
-                <div className="exerciseName">{this.props.name} ({totalPoints})</div>
+                <div className="exerciseName">{this.props.name} ({totalPoints} points)</div>
                 {rows}
             </div>
         );
@@ -115,21 +115,43 @@ class App extends React.Component {
     }
 
     renderSummary(grade) {
-        let summaryText = "dfgdfgdfg"
-        // let missedCriteria = ""
+        let gradePercent = (grade / this.totalPoints) * 100
+        let summaryText = ""
+
+        for (let remark of this.state.remarks) {
+            if (gradePercent >= remark.threshold) {
+                summaryText += remark.text;
+                break;
+            }
+        }
+
+        let missedCriteria = ""
 
         this.state.exercises.forEach(
             (exercise, i) => {
+                let hasExerciseHeader = false
+
                 exercise.criteria.forEach(
                     (criterion, j) => {
-                        summaryText += ""
+                        if (!criterion.isChecked) {
+                            if (!hasExerciseHeader) {
+                                hasExerciseHeader = true
+                                missedCriteria += "\n--- " + exercise.name + " ---\n"
+                            }
+                            missedCriteria += " - " + criterion.text + "\n"
+                        }
                     }
                 )
             }
         )
 
+        if (missedCriteria) {
+            summaryText += "Tu as perdu des points sur les éléments suivants: \n"
+            summaryText += missedCriteria
+        }
+
         return (
-            <textarea rows="30" cols="100" defaultValue={summaryText}/>
+            <textarea rows="30" cols="100" value={summaryText}/>
         );
     }
 
@@ -141,7 +163,7 @@ class App extends React.Component {
                 <div>Total: {this.totalPoints} points</div>
                 <div>{this.renderExercises()}</div>
                 <div className="title">Résumé pour l'étudiant</div>
-                <div>Note finale: {grade} sur {this.totalPoints}</div>
+                <div>Note finale: {grade} sur {this.totalPoints} points</div>
                 <div>{this.renderSummary(grade)}</div>
             </div>
         );
