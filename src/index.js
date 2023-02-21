@@ -133,7 +133,10 @@ class App extends React.Component {
 
                 exercise.criteria.forEach(
                     (criterion, j) => {
-                        if (!criterion.isChecked) {
+                        // Do not display criterion linked to a previous one if the previous one is unchecked
+                        const doNotDisplay = criterion.isLinkedToPreviousCriterion && j-1 >= 0 && !exercise.criteria[j-1].isChecked
+
+                        if (!criterion.isChecked && !doNotDisplay) {
                             if (!hasExerciseHeader) {
                                 hasExerciseHeader = true
                                 missedCriteria += "\n--- " + exercise.name + " ---\n"
