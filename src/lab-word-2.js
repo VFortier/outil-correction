@@ -1,4 +1,4 @@
-export default function labWord2() {
+export default function assessmentData() {
     return {
         name: "Lab Word 2",
         remarks: [
@@ -54,19 +54,19 @@ export default function labWord2() {
                         points: 1
                     },
                     {
-                        text: "Bordure ombre",
+                        text: "Bordure - ombre",
                         points: 1
                     },
                     {
-                        text: "Bordure trait",
+                        text: "Bordure - style du trait",
                         points: 1
                     },
                     {
-                        text: "Bordure couleur orange",
+                        text: "Bordure - couleur orange",
                         points: 1
                     },
                     {
-                        text: "Bordure largeur 3pt",
+                        text: "Bordure - largeur 3pt",
                         points: 1
                     },
                 ]
@@ -103,19 +103,19 @@ export default function labWord2() {
                         points: 2
                     },
                     {
-                        text: "Ajoutez des taquets gauche pour les mots « Article »",
+                        text: "Ajoutez un taquet gauche pour « Article »",
                         points: 2
                     },
                     {
-                        text: "Ajoutez des taquets gauche pour les mots « Matière »",
+                        text: "Ajoutez un taquet gauche pour « Matière »",
                         points: 1
                     },
                     {
-                        text: "Ajoutez des taquets gauche pour les mots  « Quantité »",
+                        text: "Ajoutez un taquet gauche pour « Quantité »",
                         points: 1
                     },
                     {
-                        text: "Ajoutez des taquets gauche pour les mots  « Couleur »",
+                        text: "Ajoutez un taquet gauche pour « Couleur »",
                         points: 1
                     },
                     {
@@ -128,36 +128,36 @@ export default function labWord2() {
                 name: "Exercice 3",
                 criteria: [
                     {
-                        text: "Section 1 et 2 Liste à puces ",
+                        text: "1ere liste - Section 1 et 2 Liste à puces ",
                         points: 2
                     },
                     {
-                        text: "Question 1,2 et 3 Liste numérotée ",
+                        text: "1ere liste - Question 1,2 et 3 Liste numérotée ",
                         points: 2
                     },
                     {
-                        text: "Question 1,2 et 3 Liste numérotée AVEC format A, B, C ",
+                        text: "1ere liste - Question 1,2 et 3 Liste numérotée AVEC format A, B, C ",
                         points: 1,
                         isLinkedToPreviousCriterion: true,
                     },
                     {
-                        text: "Action 1 et 2 Liste numérotée, format i, ii, iii ",
+                        text: "1ere liste - Action 1 et 2 Liste numérotée, format i, ii, iii ",
                         points: 2
                     },
                     {
-                        text: "Changez la couleur des A, B, C, etc. ",
+                        text: "1ere liste - Changez la couleur des A, B, C, etc. ",
                         points: 2
                     },
                     {
-                        text: "Section 1 et 2 Liste à puces (flèche) ",
+                        text: "2eme liste - Section 1 et 2 Liste à puces (flèche) ",
                         points: 3
                     },
                     {
-                        text: "Question 1,2 et 3 une image ",
+                        text: "2eme liste - Question 1,2 et 3 une image ",
                         points: 4
                     },
                     {
-                        text: "Action 1 et 2 un symbole (sourire) ",
+                        text: "2eme liste - Action 1 et 2 un symbole (sourire) ",
                         points: 4
                     },
                 ]
@@ -166,7 +166,7 @@ export default function labWord2() {
                 name: "Exercice 4",
                 criteria: [
                     {
-                        text: "Utilisation du style Normal",
+                        text: "Les changements ont été faits en modifiant le style 'Normal'",
                         points: 5
                     },
                     {

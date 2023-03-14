@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import labWord2 from './lab-word-2';
+import assessmentData from './lab-word-3';
 
 class Criterion extends React.Component {
     render() {
@@ -53,7 +53,7 @@ class Exercise extends React.Component {
 class App extends React.Component {
     constructor() {
         super();
-        let toBeState = labWord2();
+        let toBeState = assessmentData();
         this.totalPoints = 0
 
         toBeState.exercises.forEach(
@@ -160,13 +160,14 @@ class App extends React.Component {
 
     render() {
         let grade = this.calculateGrade()
+        let gradePercent = (grade / this.totalPoints) * 100
         return (
             <div className="app">
                 <div className="title">{this.state.name}</div>
                 <div>Total: {this.totalPoints} points</div>
                 <div>{this.renderExercises()}</div>
                 <div className="title">Résumé pour l'étudiant</div>
-                <div>Note finale: {grade} sur {this.totalPoints} points</div>
+                <div>Note finale: {grade} sur {this.totalPoints} points ({gradePercent}%)</div>
                 <div>{this.renderSummary(grade)}</div>
             </div>
         );
