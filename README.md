@@ -25,4 +25,6 @@ TODO
 - Allow change of "Tu as perdu des points sur..."
 - Create a main page with a list of exercises to choose from
 - Replace "isLinkedToPreviousCriterion" by sub criteria
-
+- Show current points and percent per exercises
+- Allow unchecking all checkboxes (zero) for an exercise
+- Allow penality for being late

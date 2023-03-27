@@ -36,7 +36,7 @@ export default function assessmentData() {
                         points: 2
                     },
                     {
-                        text: "Ajoutez un saut de page (Ctrl + Entrée) pour passer à la page suivante",
+                        text: "[Free] Ajoutez un saut de page (Ctrl + Entrée) pour passer à la page suivante",
                         points: 2
                     },
                     {
