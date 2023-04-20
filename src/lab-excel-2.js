@@ -33,7 +33,8 @@ export default function assessmentData() {
                     },
                     {
                         text: "Formule inscrite une seule fois en C5 puis recopiée en utilisant les $ (référencement absolu/mixte)",
-                        points: 5
+                        points: 5,
+                        note: "je donne tous les points pour =B5*1,05 puisque l'énoncé ne spécifiait pas d'utiliser la cellule B2 pour le taux"
                     },
                 ]
             },

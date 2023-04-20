@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import assessmentData from './lab-excel-2';
+import assessmentData from './lab-excel-4';
 
 class Criterion extends React.Component {
     render() {
