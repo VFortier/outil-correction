@@ -1,6 +1,6 @@
 # Project description
 
-TODO
+Web Prototype of a software to help a teacher grade assignments by automating calculation of points and generation of a text to communicate detailed grading to the student. This project was abandonned as I am working on an improved desktop version called NotaBene. 
 
 # Installation and usage
 
